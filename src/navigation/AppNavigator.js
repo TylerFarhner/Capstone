@@ -11,6 +11,7 @@ import FavoritesScreen from '../screens/FavoritesScreen'
 import AboutScreen from '../screens/AboutScreen'
 import ContactScreen from '../screens/ContactScreen'
 import AddSpotScreen from '../screens/AddSpotScreen'
+import WeatherScreen from '../screens/AddSpotScreen'
 
 const Stack = createStackNavigator();
 const Tabs = createBottomTabNavigator();
@@ -96,6 +97,8 @@ function TabsNavigator() {
                             iconName="home"
                         } else if (route.name==="Favorites") {
                             iconName='favorite'
+                        } else if (route.name==="Weather") {
+                            iconName='brightness-6'
                         }
 
                         return <MaterialIcons name={ iconName } size={24} />
@@ -106,6 +109,7 @@ function TabsNavigator() {
                 {/* Passing in HomeNavigator (above) as a screen to this Home Tab (below) */}
                 <Tabs.Screen name="Home" component={ HomeNavigator } />
                 <Tabs.Screen name="Favorites" component={ FavoritesNavigator } />
+                <Tabs.Screen name="Weather" component={ WeatherScreen } />
             </Tabs.Navigator>
     )
 }

@@ -7,7 +7,7 @@ export default function Card(props) {
         <TouchableOpacity onPress={() => props.navigation.navigate('SpotsDetails')}>
             <View style={ styles.card }>
                 <View style={ styles.titleWrapper }>
-                    <Text style={ styles.title }>Spot Name</Text>
+                    <Text style={ styles.title }>Sweet Hammock Spot</Text>
                     <MaterialIcons 
                         name="favorite-border" 
                         color="#A2c523"
@@ -15,10 +15,14 @@ export default function Card(props) {
                     />
                 </View>
                 <View style={ styles.locationWrapper }>
-                    <Text style={ styles.location }>location</Text>
+                    <Text style={ styles.location }>Somewhere cool</Text>
                 </View>
                 <View style={ styles.descriptionWrapper }>
-                    <Text style={ styles.description }>description</Text>
+                    <Text style={ styles.description }>
+                        Oh my goodness we have so much to share with you about this cool spot we found.
+                        heres all this random filler text while I scramble to get this done and deployed
+                        before it's my turn to present!
+                    </Text>
                 </View>
             </View>
         </TouchableOpacity>
@@ -28,7 +32,7 @@ export default function Card(props) {
 const styles = StyleSheet.create({
     
     card: {
-        backgroundColor: '#ffffff',
+        backgroundColor: '#39998E',
         height: 300,
         marginTop: 20,
         borderRadius: 10,
