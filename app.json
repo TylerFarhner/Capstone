@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Welcome to the mobile version of HangLoose!",
+    "githubUrl": "https://github.com/TylerFarhner/Capstone.git"
   }
 }
