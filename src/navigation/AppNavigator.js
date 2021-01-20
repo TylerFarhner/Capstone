@@ -10,6 +10,7 @@ import SpotsDetailsScreen from '../screens/SpotsDetailsScreen'
 import FavoritesScreen from '../screens/FavoritesScreen'
 import AboutScreen from '../screens/AboutScreen'
 import ContactScreen from '../screens/ContactScreen'
+import AddSpotScreen from '../screens/AddSpotScreen'
 
 const Stack = createStackNavigator();
 const Tabs = createBottomTabNavigator();
@@ -40,6 +41,10 @@ function HomeNavigator() {
                 name="SpotsDetails"
                 component={ SpotsDetailsScreen } 
                 options={{ title: 'Spot Details' }}
+            />
+            <Stack.Screen 
+                name="AddSpot"
+                component={ AddSpotScreen }
             />
         </Stack.Navigator>
     )
