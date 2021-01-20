@@ -17,7 +17,6 @@ export default function SpotsListScreen(props) {
     return (
             <View style={ styles.container }>
                 <ScrollView>
-                    <Card navigation={ props.navigation } />
                     <View >
                         <View style={ styles.form }>
                         <TextInput 
@@ -31,19 +30,21 @@ export default function SpotsListScreen(props) {
                             onPress={addSpotList}
                         />
                         </View>
-                        <ScrollView>
-                        {spotList.map(spot => <View key={spot} style={styles.hammockSpot}>
+                        <Card navigation={ props.navigation } />
+                        {spotList.map(spot => <View key={spot} style={styles.card}>
                             <Text>{spot}</Text>
                         </View>)}
-                        </ScrollView>
                     </View>
                 </ScrollView>
-                <FloatingAction 
+
+
+                            {/* ------- Commented out for now ------ */}
+                {/* <FloatingAction 
                     position="right"
                     animated={ false }
                     showBackground={ false }
                     onPressMain={() => props.navigation.navigate('AddSpot')}
-                />
+                /> */}
             </View>
             
     )
@@ -68,6 +69,17 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: 'gray'
     },
-    form: {marginTop: 10}
+    form: {marginTop: 10},
+    card: {
+        backgroundColor: '#39998E',
+        height: 300,
+        marginTop: 20,
+        borderRadius: 10,
+        shadowColor: 'black',
+        shadowOpacity: 0.25,
+        shadowOffset: { width: 0, height: 2 },
+        shadowRadius: 8,
+        elevation: 5
+    }
 
 })
