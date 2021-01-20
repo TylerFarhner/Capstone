@@ -12,7 +12,3 @@ export default function App() {
     <AppNavigator />
   );
 }
-
-const styles = StyleSheet.create({
-  
-});
