@@ -1,25 +1,27 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 import { MaterialIcons } from '@expo/vector-icons'
 
 export default function Card(props) {
     return (
-        <View style={ styles.card }>
-            <View style={ styles.titleWrapper }>
-                <Text style={ styles.title }>Spot Name</Text>
-                <MaterialIcons 
-                    name="favorite-border" 
-                    color="#A2c523"
-                    size={24}
-                />
+        <TouchableOpacity onPress={() => props.navigation.navigate('SpotsDetails')}>
+            <View style={ styles.card }>
+                <View style={ styles.titleWrapper }>
+                    <Text style={ styles.title }>Spot Name</Text>
+                    <MaterialIcons 
+                        name="favorite-border" 
+                        color="#A2c523"
+                        size={24}
+                    />
+                </View>
+                <View style={ styles.locationWrapper }>
+                    <Text style={ styles.location }>location</Text>
+                </View>
+                <View style={ styles.descriptionWrapper }>
+                    <Text style={ styles.description }>description</Text>
+                </View>
             </View>
-            <View style={ styles.locationWrapper }>
-                <Text style={ styles.location }>location</Text>
-            </View>
-            <View style={ styles.descriptionWrapper }>
-                <Text style={ styles.description }>description</Text>
-            </View>
-        </View>
+        </TouchableOpacity>
     )
 }
 
