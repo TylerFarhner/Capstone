@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 import { MaterialIcons } from '@expo/vector-icons'
 
-export default function Card() {
+export default function Card(props) {
     return (
         <View style={ styles.card }>
             <View style={ styles.titleWrapper }>

@@ -1,15 +1,14 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native'
 
-import Header from '../components/Header'
 import Card from '../components/Card'
 
-export default function SpotsListScreen() {
+export default function SpotsListScreen(props) {
+
+    // console.log(props)
+
     return (
-        <View>
-            <Header />
-            <Card />
-        </View>
+            <Card navigation={ props.navigation } />
     )
 }
 
